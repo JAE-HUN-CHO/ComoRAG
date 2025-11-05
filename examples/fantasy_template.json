@@ -1,0 +1,107 @@
+{
+  "title": "Fantasy Novel Template",
+  "genre": "fantasy",
+  "description": "Template for a classic fantasy novel",
+  "suggested_elements": {
+    "characters": [
+      {
+        "role": "protagonist",
+        "archetype": "chosen_one",
+        "traits": ["brave", "curious", "flawed"],
+        "arc": "reluctant_hero_to_champion"
+      },
+      {
+        "role": "mentor",
+        "archetype": "wise_guide",
+        "traits": ["wise", "mysterious", "protective"],
+        "arc": "sacrifice_for_greater_good"
+      },
+      {
+        "role": "antagonist",
+        "archetype": "dark_lord",
+        "traits": ["power-hungry", "manipulative", "tragic"],
+        "arc": "corruption_and_fall"
+      },
+      {
+        "role": "companion",
+        "archetype": "loyal_friend",
+        "traits": ["loyal", "humorous", "brave"],
+        "arc": "growth_through_friendship"
+      }
+    ],
+    "plot_structure": {
+      "act1_chapters": [1, 2, 3, 4, 5],
+      "act1_beats": [
+        "Ordinary world",
+        "Call to adventure",
+        "Refusal of the call",
+        "Meeting the mentor",
+        "Crossing the threshold"
+      ],
+      "act2_chapters": [6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "act2_beats": [
+        "Tests and allies",
+        "Approach to the inmost cave",
+        "Ordeal",
+        "Reward",
+        "Midpoint twist"
+      ],
+      "act3_chapters": [15, 16, 17, 18, 19, 20],
+      "act3_beats": [
+        "The road back",
+        "Resurrection",
+        "Return with the elixir",
+        "Final confrontation",
+        "Resolution"
+      ]
+    },
+    "world_building": {
+      "magic_system": {
+        "type": "soft_magic",
+        "rules": [
+          "Magic requires innate ability and training",
+          "Overuse causes physical exhaustion",
+          "Forbidden magic corrupts the user"
+        ],
+        "cost": "Physical and spiritual toll"
+      },
+      "locations": [
+        {
+          "name": "The Protagonist's Village",
+          "type": "starting_point",
+          "atmosphere": "peaceful, idyllic, doomed"
+        },
+        {
+          "name": "The Ancient Forest",
+          "type": "trial_location",
+          "atmosphere": "mysterious, dangerous, mystical"
+        },
+        {
+          "name": "The Dark Castle",
+          "type": "final_location",
+          "atmosphere": "ominous, corrupted, powerful"
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Order of Light",
+          "alignment": "good",
+          "role": "Protectors against darkness"
+        },
+        {
+          "name": "The Shadow Cult",
+          "alignment": "evil",
+          "role": "Servants of the antagonist"
+        }
+      ]
+    },
+    "themes": [
+      "Good vs Evil",
+      "Power and Corruption",
+      "Sacrifice for the greater good",
+      "Coming of age",
+      "Redemption"
+    ],
+    "tone": "Epic, adventurous, with moments of darkness and hope"
+  }
+}

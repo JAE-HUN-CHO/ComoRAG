@@ -1,81 +1,69 @@
-<h1 align="center">ComoRAG: A Cognitive-Inspired Memory-Organized RAG for Stateful Long Narrative Reasoning</h1>
+<h1 align="center">NovelForge: AI-Powered Long-Form Novel Writing Framework</h1>
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/) [![CUDA](https://img.shields.io/badge/CUDA-12.x-green)](https://developer.nvidia.com/cuda-zone) [![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)](https://kernel.org/) [![RAG](https://img.shields.io/badge/RAG-Graph%20Memory-orange)](#project-introduction) [![LLM](https://img.shields.io/badge/LLM-OpenAI%2FvLLM-purple)](#main-modules) [![Status](https://img.shields.io/badge/Status-Active-success)](#) [![arXiv](https://img.shields.io/badge/arXiv-2508.10419-b31b1b.svg)](https://arxiv.org/abs/2508.10419) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![DeepWiki](https://img.shields.io/badge/DeepWiki-ComoRAG-purple)](https://deepwiki.com/EternityJune25/ComoRAG)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/) [![CUDA](https://img.shields.io/badge/CUDA-12.x-green)](https://developer.nvidia.com/cuda-zone) [![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)](https://kernel.org/) [![LLM](https://img.shields.io/badge/LLM-OpenAI%2FvLLM-purple)](#main-modules) [![Status](https://img.shields.io/badge/Status-Active-success)](#) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-[English](README.md) | [中文](README_zh.md)
+[한국어](README_ko.md) | [English](README.md)
 
 </div>
-
-<p align="center">
-  <img src="assert/img/overview.png" alt="ComoRAG Overview" width="100%">
-</p>
-
-## 📖 Paper Information
-
-This is the **official implementation** of the paper:
-
-**[ComoRAG: A Cognitive-Inspired Memory-Organized RAG for Stateful Long Narrative Reasoning](https://arxiv.org/abs/2508.10419)**
-
-
-**Citation:**
-```bibtex
-@article{wang2025comorag,
-  title={ComoRAG: A Cognitive-Inspired Memory-Organized RAG for Stateful Long Narrative Reasoning},
-  author={Wang, Juyuan and Zhao, Rongchen and Wei, Wei and Wang, Yufeng and Yu, Mo and Zhou, Jie and Xu, Jin and Xu, Liyan},
-  journal={arXiv preprint arXiv:2508.10419},
-  year={2025}
-}
-```
 
 ---
 
 ## Project Introduction
-ComoRAG is a retrieval-augmented generation (RAG) framework designed for long-document and multi-document tasks, including question answering, information extraction, and knowledge graph construction. It integrates large language models, embedding techniques, graph-based reasoning, and evaluation methodologies, making it suitable for both academic research and real-world applications.
+**NovelForge** is an AI-powered framework for writing long-form novels with consistency, coherence, and creative depth. Inspired by cognitive memory systems, it helps authors manage complex narratives by organizing characters, plotlines, world-building, and maintaining narrative consistency throughout the story.
 
-🔥 What makes ComoRAG different?
+✨ What makes NovelForge different?
 
-Narrative comprehension on long stories and novels is hard due to intricate plotlines and evolving character/entity relations. LLMs struggle with extended context and cost, so retrieval stays crucial. However, classic RAG is often stateless and single-step, missing the dynamic nature of long-range, interconnected reasoning.
+Writing long novels is challenging due to intricate plotlines, evolving character arcs, and the need to maintain consistency across hundreds of pages. Traditional writing tools lack the intelligence to track narrative elements and ensure coherence.
 
-ComoRAG takes a cognition-inspired approach: narrative reasoning is not one-shot, but a dynamic, evolving interplay between new evidence acquisition and consolidation of past knowledge — analogous to memory processes in the brain. 🧠
+NovelForge takes a **cognition-inspired approach**: novel writing is not linear, but a dynamic process of creating, organizing, and refining narrative elements — analogous to how writers think and plan. 🧠
 
-- 🔁 Iterative Reasoning Cycles: When hitting an impasse, ComoRAG launches cycles that interact with a dynamic memory workspace.
-- 🕵️ Probing Queries: Each cycle generates targeted probes to explore new evidence paths.
-- 🧳 Global Memory Pool: Newly retrieved evidence is integrated into a shared memory pool to progressively build coherent context for the query.
+- 📚 **Character Management**: Track characters, their relationships, development arcs, and ensure consistent personalities
+- 🗺️ **Plot Structure**: Organize chapters, scenes, and plot points with timeline management
+- 🌍 **World Building**: Maintain consistent settings, rules, and background lore
+- 🔄 **Consistency Checking**: AI-powered validation of character actions, timeline, and plot coherence
+- 🎯 **Scene Generation**: Generate scenes, dialogues, and descriptions while maintaining narrative flow
+- 🧳 **Memory System**: Hierarchical memory (setting/theme/events) ensures long-term consistency
 
-🚀 Benchmarks & Gains: On four challenging long-context narrative benchmarks (200K+ tokens), ComoRAG outperforms strong RAG baselines with consistent relative gains up to 11% over the strongest baseline. It particularly shines on complex queries requiring global comprehension, enabling principled, cognitively motivated, stateful retrieval-based reasoning. 📈
+🚀 Key Features: NovelForge enables writers to focus on creativity while the AI handles consistency tracking, suggests plot developments, generates scenes, and maintains narrative coherence across long manuscripts. 📈
 
-Key idea in one line: Reason → Probe → Retrieve → Consolidate → Resolve. 🧩
+**Core workflow**: Plan → Create → Track → Validate → Refine → Generate. 🧩
 
 ---
 
 ## Key Features ✨
-- 🧠 Support for various LLMs and local/remote embedding models
-- 🕸️ Graph-augmented retrieval and reasoning
-- 🔧 Flexible data preprocessing and chunking
-- 📊 Multiple evaluation metrics (F1, EM, etc.)
-- 🧱 Modular and extensible design
+- 🧠 Support for various LLMs (OpenAI, vLLM) for intelligent content generation
+- 👥 **Character System**: Create, track, and manage character profiles with relationship graphs
+- 📖 **Plot Management**: Hierarchical chapter/scene structure with timeline tracking
+- 🌍 **World Building**: Organize settings, lore, rules in structured knowledge base
+- 🔄 **Consistency Engine**: AI validates character behavior, plot coherence, timeline accuracy
+- 🎨 **Scene Generator**: Create scenes, dialogues, descriptions matching your style
+- 🧱 **Memory Architecture**: Multi-layer memory (Setting/Theme/Event) for long-term consistency
+- 📝 **Modular & Extensible**: Easy to customize and extend
 
 ---
 
 ## Directory Structure 📂
 ```
-ComoRAG/
-├── main_openai.py                       # Main program using OpenAI API
-├── main_vllm.py                         # Main program using local vLLM server
-├── script/                              # Data processing and evaluation scripts
-│   ├── chunk_doc_corpus.py              # Document chunking script
-│   └── eval_qa.py                       # QA evaluation script
-├── dataset/                             # Dataset directory
-│   └── ...
-├── src/comorag/                        # Core code
-│   ├── ComoRAG.py                       # Main class and core logic
+NovelForge/
+├── main_novel_writer.py                 # Main novel writing interface
+├── main_openai.py                       # Novel writing with OpenAI API
+├── main_vllm.py                         # Novel writing with local vLLM
+├── examples/                            # Example novels and templates
+│   ├── fantasy_template.json            # Fantasy novel template
+│   └── mystery_template.json            # Mystery novel template
+├── src/novelforge/                      # Core code
+│   ├── NovelWriter.py                   # Main novel writing class
+│   ├── character_manager.py             # Character management system
+│   ├── plot_manager.py                  # Plot structure and timeline
+│   ├── scene_generator.py               # Scene generation engine
+│   ├── consistency_checker.py           # Consistency validation
+│   ├── world_builder.py                 # World building management
 │   ├── utils/                           # Utility modules
-│   ├── embedding_model/                 # Embedding model related
-│   ├── llm/                             # LLM related
-│   ├── prompts/                         # Prompt templates
-│   ├── information_extraction/          # Information extraction
-│   └── rerank.py, embedding_store.py    # Other core modules
+│   ├── embedding_model/                 # Embedding models
+│   ├── llm/                             # LLM integration
+│   ├── prompts/                         # Novel writing prompts
+│   └── memory_system.py                 # Hierarchical memory system
 ├── requirements.txt                     # Dependencies
 └── README.md                            # Project documentation
 ```
@@ -94,50 +82,72 @@ pip install -r requirements.txt
 ---
 
 ## Data Preparation & Format 📄
-- 📚 **Corpus file corpus.jsonl**: Each line is a document, with fields like `id`, `doc_id`, `title`, `contents`
-- ❓ **QA file qas.jsonl**: Each line is a question, with fields like `id`, `question`, `golden_answers`
 
-Example:
+NovelForge uses JSON format for novel projects:
 
-corpus.jsonl:
+### Novel Project Structure
 ```json
-{"id": 0, "doc_id": 1, "title": "...", "contents": "..."}
+{
+  "title": "My Novel Title",
+  "genre": "fantasy",
+  "characters": [...],
+  "plot": {...},
+  "world": {...},
+  "chapters": [...]
+}
 ```
-qas.jsonl:
+
+### Character Definition
 ```json
-{"id": "1", "question": "...", "golden_answers": ["..."]}
+{
+  "name": "Character Name",
+  "age": 25,
+  "personality": "brave, curious",
+  "background": "...",
+  "relationships": [{"with": "Other Character", "type": "friend"}]
+}
 ```
 
 ---
 
 ## Quick Start ⚡
 
-### Method 1: Using OpenAI API (main_openai.py) 🚀
+### Method 1: Interactive Novel Creation 🚀
 
-1. Configure dataset path and model parameters in the script:
+```bash
+python main_novel_writer.py --mode interactive
+```
+
+This launches an interactive session where you can:
+- Create characters and define relationships
+- Outline plot structure and major events
+- Generate scenes chapter by chapter
+- Validate consistency as you write
+
+### Method 2: Using OpenAI API (main_openai.py) 🚀
+
+1. Configure your novel project:
 ```python
-config = BaseConfig(
-    llm_base_url='https://api.example.com/v1',  # OpenAI API
-    llm_name='gpt-4o-mini',
-    dataset='cinderella',
+config = NovelConfig(
+    llm_base_url='https://api.openai.com/v1',
+    llm_name='gpt-4o',
+    novel_title='The Dragon Chronicles',
+    genre='fantasy',
     embedding_model_name='/path/to/your/embedding/model',
-    embedding_batch_size=32,
-    need_cluster=True,  # Enable Semantic/Episodic enhancement
-    output_dir='result/cinderella',
-    save_dir='outputs/cinderella',
-    max_meta_loop_max_iterations=5,
-    is_mc=False,  # Multiple-choice?
-    max_tokens_ver=2000,  # Veridical layer tokens
-    max_tokens_sem=2000,  # Semantic layer tokens
-    max_tokens_epi=2000   # Episodic layer tokens
+    output_dir='novels/dragon_chronicles',
+    max_tokens_scene=2000,  # Tokens per scene
+    max_tokens_dialogue=1500,  # Tokens for dialogue
+    consistency_check=True,  # Enable consistency validation
+    style_guide='descriptive, vivid imagery'
 )
 ```
-2. Run the main program ▶️:
+
+2. Run the novel writer ▶️:
 ```bash
 python main_openai.py
 ```
 
-### Method 2: Using Local vLLM Server (main_vllm.py) ⚡
+### Method 3: Using Local vLLM Server (main_vllm.py) ⚡
 
 #### 1. Start vLLM Server 🚀
 
@@ -171,24 +181,19 @@ Modify the configuration in `main_vllm.py`:
 
 ```python
 # vLLM server configuration
-vllm_base_url = 'http://localhost:8000/v1'  # vLLM server address
-served_model_name = '/path/to/your/model'    # Model path
+vllm_base_url = 'http://localhost:8000/v1'
+served_model_name = '/path/to/your/model'
 
-config = BaseConfig(
+config = NovelConfig(
     llm_base_url=vllm_base_url,
     llm_name=served_model_name,
-    llm_api_key="your-api-key-here",  # Any value, local server doesn't need real API key
-    dataset='cinderella',
+    llm_api_key="your-api-key-here",  # Any value for local server
+    novel_title='My Fantasy Novel',
+    genre='fantasy',
     embedding_model_name='/path/to/your/embedding/model',
-    embedding_batch_size=4,
-    need_cluster=True,
-    output_dir='result/cinderella_vllm',
-    save_dir='outputs/cinderella_vllm',
-    max_meta_loop_max_iterations=5,
-    is_mc=False,
-    max_tokens_ver=2000,
-    max_tokens_sem=2000,
-    max_tokens_epi=2000
+    output_dir='novels/fantasy_novel',
+    max_tokens_scene=2000,
+    consistency_check=True
 )
 ```
 
@@ -210,51 +215,97 @@ netstat -tlnp | grep 8000
 curl http://localhost:8000/v1/models
 ```
 
-### Comparison of Two Methods 📊
+### Comparison of Methods 📊
 
-| Feature | OpenAI API (main.py) | vLLM Local (main_vllm.py) |
-|---------|---------------------|---------------------------|
-| Cost | Pay per token | One-time model download |
-| Speed | Network latency | Local inference, faster |
-| Privacy | Data sent to cloud | Completely local processing |
-| Setup | Simple, just API key | Requires GPU and model files |
-| Stability | Network dependent | Local control |
+| Feature | OpenAI API | vLLM Local | Interactive |
+|---------|------------|------------|-------------|
+| Cost | Pay per token | One-time download | Same as base method |
+| Speed | Network latency | Local, faster | Interactive pace |
+| Privacy | Cloud | Fully local | Same as base method |
+| Setup | Simple | Needs GPU | Easiest |
+| Control | API limits | Full control | Most flexible |
 
-3. 📁 Results will be saved under `result/<dataset>/<subset>/`
-
----
-
-## Main Modules
-- 🏛️ `ComoRAG.py`: The main class, responsible for retrieval, graph construction, reasoning, and QA
-- 🧰 `utils/`: Configuration, logging, embedding, clustering, summarization, memory, agents, and other utilities
-- 🧲 `embedding_model/`: Embedding model adaptation and loading
-- 🤖 `llm/`: LLM adaptation
-- 🗒️ `prompts/`: Prompt template management
-- 📦 `embedding_store.py`: Embedding vector storage and retrieval
+📁 Generated novels saved under `novels/<project_name>/`
 
 ---
 
-## Data Processing & Evaluation Scripts 🧪
-- ✂️ `script/chunk_doc_corpus.py`: Document chunking, supports token/word/sentence/recursive methods
-- 📈 `script/eval_qa.py`: Automatic QA result evaluation, supports EM, F1, and other metrics
+## Main Modules 📦
 
-Example usage:
+### Core Components
+- 📖 **`NovelWriter.py`**: Main novel generation orchestrator
+- 👥 **`character_manager.py`**: Character creation, tracking, relationship graphs
+- 🗺️ **`plot_manager.py`**: Chapter structure, timeline, plot points
+- 🎨 **`scene_generator.py`**: AI-powered scene and dialogue generation
+- 🔍 **`consistency_checker.py`**: Validates character behavior, timeline, plot logic
+- 🌍 **`world_builder.py`**: Manages settings, lore, rules, world details
 
-Chunking documents ✂️:
-```bash
-python script/chunk_doc_corpus.py \
-  --input_path dataset/<name>/<subset>/corpus.jsonl \
-  --output_path dataset/<name>/<subset>/corpus_chunked.jsonl \
-  --chunk_by token \
-  --chunk_size 512 \
-  --tokenizer_name_or_path /path/to/your/tokenizer
+### Supporting Systems
+- 🧰 **`utils/`**: Memory system, configuration, logging, agents
+- 🧲 **`embedding_model/`**: Text embedding for semantic search
+- 🤖 **`llm/`**: LLM integration (OpenAI, vLLM)
+- 🗒️ **`prompts/`**: Novel-specific prompt templates (scene generation, character dialogue, etc.)
+- 📦 **`memory_system.py`**: Hierarchical memory (Setting/Theme/Event) for consistency
+
+---
+
+## Usage Examples 🎯
+
+### Creating a Fantasy Novel
+
+```python
+from src.novelforge import NovelWriter, CharacterManager, PlotManager
+
+# Initialize novel project
+novel = NovelWriter(
+    title="The Last Mage",
+    genre="fantasy",
+    llm_name="gpt-4o"
+)
+
+# Create characters
+char_mgr = novel.character_manager
+protagonist = char_mgr.create_character(
+    name="Aria",
+    age=24,
+    personality="brave, determined, curious",
+    background="Last surviving mage in a world where magic is forbidden"
+)
+
+# Define plot structure
+plot_mgr = novel.plot_manager
+plot_mgr.add_plot_point(
+    chapter=1,
+    event="Aria discovers her magical abilities",
+    importance="critical"
+)
+
+# Generate scenes
+scene = novel.generate_scene(
+    chapter=1,
+    scene_number=1,
+    prompt="Aria's ordinary day is interrupted by a magical incident",
+    tone="mysterious, tense"
+)
+
+# Check consistency
+novel.check_consistency()
+
+# Export novel
+novel.export(format="markdown", output_path="novels/the_last_mage.md")
 ```
 
-Evaluate QA results 📊:
+### Interactive Mode
+
 ```bash
-python script/eval_qa.py /path/to/result/<dataset>/<subset>
+python main_novel_writer.py --mode interactive
+
+# Follow prompts:
+# 1. Enter novel title and genre
+# 2. Create characters
+# 3. Outline major plot points
+# 4. Generate chapters scene by scene
+# 5. Review and refine
 ```
-This produces files like ``details`、`results.json`, etc.
 
 ---
 
@@ -264,4 +315,4 @@ For questions or suggestions, feel free to submit an Issue or PR.
 ---
 
 ## Acknowledgement 🙏
-We refer to the repository of [HippoRAG](https://github.com/OSU-NLP-Group/HippoRAG) as a skeleton code.
+This framework is inspired by cognitive memory systems research and builds upon narrative AI techniques. Original RAG architecture adapted from [ComoRAG](https://arxiv.org/abs/2508.10419).
